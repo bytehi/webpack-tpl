@@ -1,1 +1,1 @@
-import './sort/insert-sort'
+console.log(1)
