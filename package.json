@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack serve --config build/webpack.dev.js",
-    "build": "cross-env NODE_ENV=production webpack serve --config build/webpack.prod.js",
+    "build": "cross-env NODE_ENV=production webpack build --config build/webpack.prod.js",
     "build: analyzer": "cross-env NODE_ENV=production_analyzer webpack serve --config build/webpack.prod.js",
     "test": "jest --detectOpenHandles"
   },

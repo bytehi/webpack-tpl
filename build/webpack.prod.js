@@ -1,8 +1,9 @@
 const webpack = require('webpack')
-const { megre } = require('webpack-merge')
+const { merge } = require('webpack-merge')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const webpackCommonConf = require('./webpack.common')
+const path = require('path')
 
 const isAnalyzer = process.env.NODE_ENV === 'production_analyzer'
 
@@ -18,7 +19,7 @@ if(isAnalyzer) {
 }
 
 
-module.exports = megre(webpackCommonConf, {
+module.exports = merge(webpackCommonConf, {
   mode: 'production',
   output: {
     filename: 'index.[contenthash:8].js',
